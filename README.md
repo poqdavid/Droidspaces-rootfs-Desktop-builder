@@ -1,41 +1,41 @@
-中文 | [English](README_english.md)
+English | [中文](README.md)
 
-# Droidspaces RootFS 自动构建
+# Droidspaces RootFS Builder
 
-通过 GitHub Actions 为 Android 上的 Droidspaces 构建 Debian、Ubuntu、Fedora 或 Arch Linux ARM64 RootFS。可选择 KDE、KDE Mobile、GNOME、Anland Next、Arch Niri 或纯命令行环境，再下载 `.tar.xz` 导入 Droidspaces。
+Build ARM64 Linux RootFS images for Droidspaces on Android with GitHub Actions. Choose Debian, Ubuntu, Fedora, or Arch Linux, select KDE, KDE Mobile, GNOME, Anland Next, Arch Niri, or command-line mode, then import the generated `.tar.xz` archive into Droidspaces.
 
-![Debian 13 KDE 桌面运行于 Anland Wayland](docs/images/debian-kde-wayland.jpg)
+![Debian 13 KDE running with Anland Wayland](docs/images/debian-kde-wayland.jpg)
 
-**快速开始：** Fork 仓库 → 打开 `Actions` → 运行“编译并发布 Droidspaces RootFS” → 从 `Releases` 下载 RootFS。
+**Quick start:** Fork this repository → open `Actions` → run “Build and Release Droidspaces RootFS” → download the RootFS from `Releases`.
 
-## 项目内容
+## What it provides
 
-- 七种发行版构建目标，支持 X11 与 Anland Wayland（依桌面和发行版而定）。
-- 可选中文环境、Fcitx5、Snapdragon GPU 支持、音频转发、开发工具和 Docker。
-- RootFS 自动发布到 GitHub Releases；容器内提供桌面会话、USB 管理与维护工具。
+- Seven distribution targets, with X11 and Anland Wayland support depending on the selected profile and distribution.
+- Optional Chinese locale, Fcitx5, Snapdragon GPU support, audio forwarding, development tools, and Docker.
+- Automatic GitHub Release publishing, desktop session startup, USB management, and in-container maintenance tools.
 
-## 文档
+## Documentation
 
-- [文档目录与桌面截图](docs/zh/README.md)
-- [从 Actions 构建并导入 Droidspaces](docs/zh/快速开始.md)
-- [发行版兼容性与构建选项](docs/zh/构建选项.md)
-- [桌面启动与 Anland Wayland 配置](docs/zh/桌面与Anland.md)
-- [TUI、USB、固件与本地构建](docs/zh/进阶使用.md)
-- [脚本维护说明](scripts/README.md)
+- [Documentation index and desktop screenshots](docs/en/README.md)
+- [Build with Actions and import into Droidspaces](docs/en/quick-start.md)
+- [Supported distributions and build options](docs/en/build-options.md)
+- [Desktop startup and Anland Wayland setup](docs/en/desktop-and-anland.md)
+- [TUI, USB, firmware, and local builds](docs/en/advanced-usage.md)
+- [Script maintenance guide](scripts/README_english.md)
 
-## 支持范围
+## Targets
 
-构建目标：`Debian-13`、`Ubuntu-24`、`Ubuntu-25`、`Ubuntu-26`、`Fedora-43`、`Fedora-44`、`Arch`。Niri 目前只在 Arch Linux ARM 上提供。桌面及显示后端的完整兼容矩阵见[构建选项](docs/zh/构建选项.md)。
+`Debian-13`, `Ubuntu-24`, `Ubuntu-25`, `Ubuntu-26`, `Fedora-43`, `Fedora-44`, and `Arch`. Niri is currently available only on Arch Linux ARM. See the [build options guide](docs/en/build-options.md) for desktop and display-backend compatibility.
 
-## 致谢
+## Acknowledgements
 
-- [Droidspaces-OSS](https://github.com/ravindu644/Droidspaces-OSS/)：提供项目运行环境基础。
-- [mesa-for-android-container](https://github.com/lfdevs/mesa-for-android-container)：提供 Snapdragon GPU 驱动支持。
-- [droidspaces-media-decode](https://github.com/Re-s/droidspaces-media-decode)：提供 Android MediaCodec 容器硬件解码支持。
-- [Anland](https://github.com/superturtlee/anland)：提供 Wayland 显示后端及相关工作。
-- [Droidspaces USB Manager](https://github.com/Yizhou147/Droidspaces-USB-Manager)：提供 USB 存储和 ADB 设备管理工具。
-- [ObsidianArc](https://github.com/OnyxAxisOwO/ObsidianArc)：自托管多模型聊天网关，感谢他们提供公益 AI 服务。
+- [Droidspaces-OSS](https://github.com/ravindu644/Droidspaces-OSS/): runtime foundation.
+- [mesa-for-android-container](https://github.com/lfdevs/mesa-for-android-container): Snapdragon GPU driver support.
+- [droidspaces-media-decode](https://github.com/Re-s/droidspaces-media-decode): Android MediaCodec hardware decoding for containers.
+- [Anland](https://github.com/superturtlee/anland): Wayland display backend and related work.
+- [Droidspaces USB Manager](https://github.com/Yizhou147/Droidspaces-USB-Manager): USB storage and ADB device management.
+- [ObsidianArc](https://github.com/OnyxAxisOwO/ObsidianArc): self-hosted multi-model chat gateway; thanks for providing public-benefit AI services.
 
 ---
 
-[所有桌面截图](docs/zh/README.md#桌面截图) · [English README](README_english.md)
+[All desktop screenshots](docs/en/README.md#screenshots) · [中文 README](README.md)
